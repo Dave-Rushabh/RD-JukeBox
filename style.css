@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* styling the navbar */
+
+.navigation{
+    top: 0;
+    position: sticky;
+    background-color: #457b9d;
+    margin-bottom: 45px;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+.nav-height-2{
+    height: 60px;
+}
+
+/* .nav-height-1{
+    height: 60px;
+}
+
+.nav-height-2{
+    height: auto;
+} */
+
+.nav-elements{
+    display: flex;
+    width: 100%;
+}
+
+.title{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.home{
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.artists{
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.genre{
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.genre ul li {
+    list-style: none;
+    display: none;
+    width: 150px;
+    height: 30px;
+    background-color: powderblue;
+    color: black;
+    font-size: 16px;
+    border-style: solid;
+    border-color: tomato;
+}
+
+.genre:hover > ul li{
+    display: block;
+    float: left;
+    
+}
+
+.genre ul li:hover{
+    background-color: white;
+}
+
+.search{
+    margin-left: 25px;
+    margin-top: 10px;
+    /* text-align: center; */
+    margin-bottom: 10px;
+}
+
+.inpt > input {
+    width: 225px;
+    height: 25px;
+    font-family: 'Baloo Paaji 2', cursive;
+    padding-left: 20px;
+    font-size: 16px;
+    border-style: solid;
+    border-radius: 10px;
+    color: gray;
+}
+
+.formm{
+    display: flex;
+}
+
+.btn{
+    margin-left: 15px;
+    height: 30px;
+    width: 80px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    color: black;
+    background: white;
+    font-size: 16px;
+    font-family: 'Baloo Paaji 2', cursive;
+    cursor: pointer;
+}
+
+.btn-new{
+    background: yellow;
+    cursor: pointer;
+}
+
+.contact{
+    margin-left: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.lines{
+    position: absolute;
+    right: 15px;
+    display: none;
+    cursor: pointer;
+}
+
+.lines:hover > .line-1 {
+    background-color: yellow;
+    transition: 0.5s ease-in-out;
+}
+
+.lines:hover > .line-2 {
+    background-color: yellow;
+    transition: 0.5s ease-in-out;
+}
+
+.lines:hover > .line-3 {
+    background-color: yellow;
+    transition: 0.5s ease-in-out;
+}
+
+.line-1{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+.line-2{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.line-3{
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin-top: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.changed-top{
+    transform: translateY(5px) rotateZ(45deg);
+    transition: 0.5s ease-in-out;
+}
+
+.changed-bottom{
+    transform: translateY(-4px) rotateZ(-45deg);
+    transition: 0.5s ease-in-out;
+}
+
+.changed-middle{
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+/* styling the footer */
+
+.footer{
+    height: 50px;
+    background-color: #A8DADC;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-size: 16px;
+    color: black;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.foot{
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* adding responsiveness to nav bar */
+
+@media screen and (max-width : 1195px){
+
+    .nav-elements{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .home{
+        margin : auto;
+    }
+
+    .artists{
+        margin: auto;
+    }
+
+    .genre{
+        margin: auto;
+    }
+
+    .contact{
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    .formm{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search{
+        margin: auto;
+    }
+
+    .btn{
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .lines{
+        display: block;
+    }
+
+    .invisible{
+        display: none;
+    }
+
+    .nav-height-1{
+        height: auto;
+    }  
+
+}
+
+/* styling main div body of music player */
+
+.main_div{
+    height: 375px;
+    width: 250px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #457b9d;
+    margin: auto;
+    box-shadow: 8px 8px 10px #d3d3d3;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 65px;
+    /* position:static; */
+}
+
+
+
+
+
+.img_container{
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px; */
+    height: 150px;
+    width: 150px;
+}
+
+.img_container img {
+   border-radius: 50%;
+   height: 100%;
+   width: 100%;
+   border-style: solid;
+   border-color: #457b9d;
+   box-shadow: 5px 5px 10px #d3d3d3;
+}
+
+.music_controls{
+    margin-top: 65px;
+    text-align: center;
+}
+
+.music_controls .fas:hover{
+    filter: drop-shadow(0 0 3px #d3d3d3);
+    color: #457b9d;
+}
+
+#previous{
+    cursor: pointer;
+}
+
+#play{
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#pause{
+    display: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#next{
+    cursor: pointer;
+}
+
+h2{
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Baloo Paaji 2', cursive;
+    text-shadow: 3px 3px #d3d3d3;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Baloo Paaji 2', cursive;
+    color: gray;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+.rotation{
+    animation: rotatePlayer 10s linear infinite;
+}
+
+@keyframes rotatePlayer {
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
